@@ -16,15 +16,15 @@ class Traveler {
             this.isHealthy = false
         }
     }
+}
 
-    class Doctor {
-
-    heal(traveler) {
+class Doctor extends Traveler {
+    constructor(name) {
+        super(name)
         this.isHealthy = true
     }
-}
 
-class Hunter {
+    heal(traveler) {
 
-}
+    }
 }
