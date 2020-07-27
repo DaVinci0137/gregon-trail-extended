@@ -16,4 +16,15 @@ class Traveler {
             this.isHealthy = false
         }
     }
+
+    class Doctor {
+
+    heal(traveler) {
+        this.isHealthy = true
+    }
+}
+
+class Hunter {
+
+}
 }
