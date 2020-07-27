@@ -21,10 +21,33 @@ class Traveler {
 class Doctor extends Traveler {
     constructor(name) {
         super(name)
-        this.isHealthy = true
     }
 
     heal(traveler) {
+        traveler.isHealthy = true
+    }
+}
+
+class Hunter extends Traveler {
+    constructor(name) {
+        super(name)
+        this.food = 2
+    }
+
+    hunt() {
+        this.food = this.food + 5
+    }
+
+    eat() {
+        if (this.food) {
+            this.food = this.food - 2
+        } else {
+            this.food = this.food - 1
+            this.isHealthy = false
+        }
+    }
+
+    giveFood(traveler, numOfFoodUnits) {
 
     }
 }
