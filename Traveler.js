@@ -39,15 +39,18 @@ class Hunter extends Traveler {
     }
 
     eat() {
-        if (this.food) {
+        if (this.food > 1) {
             this.food = this.food - 2
         } else {
-            this.food = this.food - 1
+            this.food = 0
             this.isHealthy = false
         }
     }
 
     giveFood(traveler, numOfFoodUnits) {
-
+        if (this.food >= numOfFoodUnits) {
+            traveler.food += numOfFoodUnits
+            this.food -= numOfFoodUnits
+        }
     }
 }
